@@ -51,15 +51,6 @@ function TransactionDashboard() {
         console.log("newArray", newArray)
     }
 
-    // useEffect(() => {
-    //     const newArray = transactionArray.filter((t) => {
-    //         return t.merchant.toLowerCase().includes(input.toLowerCase())
-    //     })
-    //     settempArray(newArray)
-    //     console.log(newArray)
-    // }, [input])
-
-
     useEffect(() => {
         fetchAllUsers()
     }, [])
@@ -132,7 +123,7 @@ function TransactionDashboard() {
     let paginatedData = tempArray.slice(start, end)
 
     return (
-        <div className=' flex flex-col gap-4 border p-5 mt-5'>
+        <div className=' flex flex-col gap-4 border p-5 mt-5 mx-10'>
             {
                 error && <div><p className='text-red-500 text-xl font-semibold'>{error}</p></div>
             }
